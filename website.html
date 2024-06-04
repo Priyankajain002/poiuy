@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>l</title>
+</head>
+<body>
+    <h1>My Notes</h1>
+    <form method="POST" action="/notes">
+        <div>
+            <label for="text">Note:</label>
+            <input type="text" id="text" name="text">
+        </div>
+        <button type="submit">Add Note</button>
+    </form>
+    <ul>
+        <% for (Note note : notes) { %>
+        <li><%= note.getText() %></li>
+        <% } %>
+    </ul>
+</body>
+</html>
